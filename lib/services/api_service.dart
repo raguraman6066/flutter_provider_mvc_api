@@ -3,7 +3,7 @@ import '../models/character_model.dart';
 
 class RemoteServices {
   static var dio = Dio();
-  static const baseUrl = 'YOUR_API_BASE_URL';
+  static const baseUrl = 'https://hp-api.onrender.com/api';
 
   static Future<List<Character>> fetchCharacters() async {
     try {
@@ -36,7 +36,7 @@ class RemoteServices {
     }
   }
 
-  static Future<void> deleteCharacter(int characterId) async {
+  static Future<void> deleteCharacter(String characterId) async {
     try {
       await dio.delete('$baseUrl/characters/$characterId');
     } catch (e) {

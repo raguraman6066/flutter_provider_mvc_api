@@ -16,7 +16,7 @@ class CharacterListPage extends StatelessWidget {
         builder: (context, controller, child) {
           if (controller.isLoading) {
             return Center(child: CircularProgressIndicator());
-          } else if (controller.error.isEmpty) {
+          } else if (controller.error.isNotEmpty || controller.error != '') {
             return Center(child: Text(controller.error));
           } else {
             return ListView.builder(

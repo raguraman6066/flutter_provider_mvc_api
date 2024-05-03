@@ -25,6 +25,7 @@ class CharacterController extends ChangeNotifier {
     try {
       setLoading(true);
       _characters = await RemoteServices.fetchCharacters();
+      print(characters.first.toString());
     } catch (e) {
       _error = 'Failed to load characters: $e';
     } finally {

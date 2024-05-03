@@ -30,7 +30,7 @@ class _CreateCharacterPageState extends State<CreateCharacterPage> {
             ElevatedButton(
               onPressed: () {
                 final character = Character(
-                  id: 0, // Assigning 0 for ID as it's a new character
+                  id: '0', // Assigning 0 for ID as it's a new character
                   name: _nameController.text,
                 );
                 Provider.of<CharacterController>(context, listen: false)
